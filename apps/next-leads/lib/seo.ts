@@ -102,7 +102,7 @@ export function getCityMetadata(city: City, options?: { description?: string; ti
 export function getLegalMetadata(): Metadata {
   return createMetadata({
     title: `Mentions légales | ${brandName}`,
-    description: "Informations légales, responsabilité éditoriale et coordonnées de l'exploitant Desamiant'Pro.",
+    description: "Informations légales, responsabilité éditoriale et coordonnées de l'exploitant Desamiantage-Fraance.",
     path: "/mentions-legales",
     openGraphType: "article",
   });
@@ -112,7 +112,7 @@ export function getPrivacyMetadata(): Metadata {
   return createMetadata({
     title: `Politique de confidentialité | ${brandName}`,
     description:
-      "Cadre de collecte, de conservation et d'utilisation des données personnelles pour les demandes de désamiantage traitées par Desamiant'Pro.",
+      "Cadre de collecte, de conservation et d'utilisation des données personnelles pour les demandes de désamiantage traitées par Desamiantage-Fraance.",
     path: "/politique-confidentialite",
     openGraphType: "article",
   });
