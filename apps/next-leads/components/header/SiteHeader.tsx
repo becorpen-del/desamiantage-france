@@ -89,9 +89,9 @@ export default function SiteHeader() {
               <Image
                 src="/logo-site.webp"
                 alt={brandName}
-                width={160}
-                height={160}
-                className="h-10 w-auto"
+                width={200}
+                height={200}
+                className="h-12 w-auto sm:h-14"
                 priority
               />
             </Link>
