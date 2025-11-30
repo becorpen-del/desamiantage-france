@@ -1,0 +1,16 @@
+node_modules
+.next
+.out
+.vercel
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+dist
+build
+.DS_Store
+.env
+.env.local
+coverage
+.vscode
+.idea
+*.log

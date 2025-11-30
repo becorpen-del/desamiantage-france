@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Certification Qualibat</title>
+  <rect width="64" height="64" rx="12" fill="#0E7490" />
+  <path d="M18 44L32 20l14 24H18z" fill="#fff" opacity="0.85" />
+  <path d="M24 36h16l-8-14-8 14z" fill="#0E5E75" opacity="0.9" />
+</svg>

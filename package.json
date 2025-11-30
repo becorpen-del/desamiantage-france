@@ -1,0 +1,21 @@
+{
+  "name": "desamiant-pro",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./scripts/stack-run.mjs dev",
+    "build": "node ./scripts/stack-run.mjs build",
+    "lint": "node ./scripts/stack-run.mjs lint",
+    "test": "node ./scripts/stack-run.mjs test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.4"
+  }
+}

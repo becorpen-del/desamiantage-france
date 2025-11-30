@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demande de devis | Desamiant'Pro</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <main class="mx-auto max-w-4xl px-6 py-16 space-y-10">
+      <header class="space-y-4">
+        <a href="../index.html" class="text-sm text-brand">← Retour à l'accueil</a>
+        <h1 class="text-4xl font-semibold">Demande de devis</h1>
+        <p class="text-lg text-slate-600">
+          Remplissez le formulaire ci-dessous pour être recontacté(e) sous 2 heures ouvrées.
+        </p>
+      </header>
+      <form
+        name="lead-desamiantage"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="_company"
+        data-webhook="https://script.google.com/macros/s/XXXXX/exec"
+        data-min-delay="2500"
+        class="space-y-4"
+      >
+        <input type="hidden" name="form-name" value="lead-desamiantage" />
+        <input type="hidden" name="submitDelay" value="" data-submit-delay />
+        <input type="hidden" name="utm_source" data-utm-source />
+        <input type="hidden" name="utm_medium" data-utm-medium />
+        <input type="hidden" name="utm_campaign" data-utm-campaign />
+        <input type="hidden" name="utm_term" data-utm-term />
+        <input type="hidden" name="utm_content" data-utm-content />
+        <input type="hidden" name="gclid" data-utm-gclid />
+        <p class="hidden">
+          <label>
+            Ne pas remplir
+            <input name="_company" />
+          </label>
+        </p>
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Nom et prénom*
+            <input name="nom" required minlength="2" maxlength="80" class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none" />
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            E-mail*
+            <input type="email" name="email" required class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none" />
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Téléphone*
+            <input type="tel" name="telephone" required class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none" />
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Code postal*
+            <input name="codePostal" required maxlength="5" class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none" />
+          </label>
+          <label class="md:col-span-2 flex flex-col gap-1 text-sm text-slate-700">
+            Ville*
+            <input name="ville" required maxlength="80" class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none" />
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Type de bâtiment*
+            <select name="typeBatiment" required class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none">
+              <option value="House">Maison individuelle</option>
+              <option value="Apartment">Appartement / Copropriété</option>
+              <option value="Commercial">Local commercial / ERP</option>
+              <option value="Industrial">Site industriel</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Type d'intervention*
+            <select name="typePrestation" required class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none">
+              <option value="diagnostic-amiante">Diagnostic amiante</option>
+              <option value="desamiantage-batiment">Désamiantage bâtiment</option>
+              <option value="desamiantage-toiture">Désamiantage toiture</option>
+              <option value="desamiantage-industriel">Désamiantage industriel</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-1 text-sm text-slate-700">
+            Délai souhaité*
+            <select name="delai" required class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none">
+              <option value="Urgent 48h">Urgent 48h</option>
+              <option value="< 7 jours">Sous 7 jours</option>
+              <option value="&gt; 7 jours">Au-delà de 7 jours</option>
+            </select>
+          </label>
+          <label class="md:col-span-2 flex flex-col gap-1 text-sm text-slate-700">
+            Décrivez votre projet*
+            <textarea
+              name="description"
+              rows="5"
+              minlength="20"
+              maxlength="800"
+              required
+              class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+              placeholder="Précisez les matériaux à traiter, la surface estimée, la présence d'occupants et vos délais."
+            ></textarea>
+          </label>
+        </div>
+        <label class="flex items-start gap-2 text-left text-xs text-slate-500">
+          <input type="checkbox" name="consentement" required class="mt-1" />
+          J'accepte d'être recontacté(e) par Desamiant'Pro et ses partenaires pour traiter ma demande.
+        </label>
+        <div data-form-feedback class="text-sm"></div>
+        <button type="submit" class="btn-brand">Envoyer ma demande</button>
+      </form>
+    </main>
+  </body>
+</html>

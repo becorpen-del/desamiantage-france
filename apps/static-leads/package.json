@@ -1,0 +1,16 @@
+{
+  "name": "static-leads",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist && mkdir -p dist/assets",
+    "copy": "cp -R src/* dist/",
+    "dev": "npm run clean && npm run copy && tailwindcss -i ./src/assets/styles.css -o ./dist/assets/styles.css --watch",
+    "build": "npm run clean && npm run copy && tailwindcss -i ./src/assets/styles.css -o ./dist/assets/styles.css --minify",
+    "lint": "echo 'Pas de lint configuré pour la version statique'",
+    "test": "echo 'Pas de tests pour la version statique'"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

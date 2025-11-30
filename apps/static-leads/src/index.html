@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desamiant'Pro | Experts du désamiantage</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <header class="bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="Desamiant'Pro" class="h-10" />
+          <span class="text-lg font-semibold text-slate-900">Desamiant'Pro</span>
+        </div>
+        <nav class="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
+          <a href="/services/">Services</a>
+          <a href="/devis/">Devis</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex flex-1 flex-col gap-16 pb-20">
+      <section class="bg-white">
+        <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 lg:flex-row lg:items-center">
+          <div class="flex-1 space-y-6">
+            <span class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1 text-sm font-medium text-slate-700">
+              Desamiant'Pro · Désamiantage certifié
+            </span>
+            <h1 class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+              Désamiantage sécurisé partout en France
+            </h1>
+            <p class="text-lg text-slate-600">
+              Diagnostic, retrait et élimination de l'amiante pour les bâtiments résidentiels, tertiaires et industriels.
+            </p>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a href="/devis/" class="btn-brand">Demander un devis express</a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                >Discuter avec un expert</a
+              >
+            </div>
+          </div>
+          <div class="flex-1 rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200/50">
+            <h2 class="text-xl font-semibold text-slate-800">Pourquoi nous choisir</h2>
+            <ul class="mt-6 space-y-4 text-slate-600">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
+                Accompagnement complet : diagnostic, plan de retrait, élimination.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
+                Réseau national d'entreprises 1552 et SS4 auditées.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>
+                Délais optimisés et reporting conforme aux autorités.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-900 py-12 text-white">
+        <div class="mx-auto flex max-w-5xl flex-col gap-6 px-6 md:flex-row md:justify-between">
+          <div>
+            <p class="text-lg font-semibold">Entreprises certifiées 1552</p>
+            <p class="mt-1 text-sm text-slate-300">Audits qualité annuels et contrôles sur chantier.</p>
+          </div>
+          <div>
+            <p class="text-lg font-semibold">Couverture nationale</p>
+            <p class="mt-1 text-sm text-slate-300">Réseau d'équipes locales dans 30 départements.</p>
+          </div>
+          <div>
+            <p class="text-lg font-semibold">Traçabilité totale</p>
+            <p class="mt-1 text-sm text-slate-300">Bordereaux BSDASRI et rapports photo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-slate-50">
+        <div class="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-16 lg:flex-row">
+          <div class="flex-1 space-y-5">
+            <h2 class="text-3xl font-semibold text-slate-900">Votre projet, notre réseau</h2>
+            <p class="text-lg text-slate-600">
+              Nous présélectionnons des entreprises de désamiantage certifiées 1552 et SS4, vérifions leurs assurances et coordonnons la réponse à votre cahier des charges.
+            </p>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2 w-2 rounded-full bg-brand"></span>
+                Qualification des besoins en moins de 2 heures ouvrées.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2 w-2 rounded-full bg-brand"></span>
+                Mise en relation avec 1 à 3 entreprises locales auditées.
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <form
+              name="lead-desamiantage"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="_company"
+              data-webhook="https://script.google.com/macros/s/XXXXX/exec"
+              data-min-delay="2500"
+              class="flex flex-col gap-4 rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/60"
+            >
+              <input type="hidden" name="form-name" value="lead-desamiantage" />
+              <input type="hidden" name="submitDelay" value="" data-submit-delay />
+              <input type="hidden" name="utm_source" data-utm-source />
+              <input type="hidden" name="utm_medium" data-utm-medium />
+              <input type="hidden" name="utm_campaign" data-utm-campaign />
+              <input type="hidden" name="utm_term" data-utm-term />
+              <input type="hidden" name="utm_content" data-utm-content />
+              <input type="hidden" name="gclid" data-utm-gclid />
+              <p class="hidden">
+                <label>
+                  Ne pas remplir
+                  <input name="_company" />
+                </label>
+              </p>
+              <h3 class="text-2xl font-semibold text-slate-900">Demande de devis</h3>
+              <div class="grid gap-4 md:grid-cols-2">
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Nom et prénom*
+                  <input
+                    name="nom"
+                    required
+                    minlength="2"
+                    maxlength="80"
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  />
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  E-mail*
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  />
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Téléphone*
+                  <input
+                    type="tel"
+                    name="telephone"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  />
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Code postal*
+                  <input
+                    name="codePostal"
+                    required
+                    maxlength="5"
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  />
+                </label>
+                <label class="md:col-span-2 flex flex-col gap-1 text-sm text-slate-700">
+                  Ville*
+                  <input
+                    name="ville"
+                    required
+                    maxlength="80"
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  />
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Type de bâtiment*
+                  <select
+                    name="typeBatiment"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  >
+                    <option value="House">Maison individuelle</option>
+                    <option value="Apartment">Appartement / Copropriété</option>
+                    <option value="Commercial">Local commercial / ERP</option>
+                    <option value="Industrial">Site industriel</option>
+                  </select>
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Type d'intervention*
+                  <select
+                    name="typePrestation"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  >
+                    <option value="diagnostic-amiante">Diagnostic amiante</option>
+                    <option value="desamiantage-batiment">Désamiantage bâtiment</option>
+                    <option value="desamiantage-toiture">Désamiantage toiture</option>
+                    <option value="desamiantage-industriel">Désamiantage industriel</option>
+                  </select>
+                </label>
+                <label class="flex flex-col gap-1 text-sm text-slate-700">
+                  Délai souhaité*
+                  <select
+                    name="delai"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                  >
+                    <option value="Urgent 48h">Urgent 48h</option>
+                    <option value="< 7 jours">Sous 7 jours</option>
+                    <option value="&gt; 7 jours">Au-delà de 7 jours</option>
+                  </select>
+                </label>
+                <label class="md:col-span-2 flex flex-col gap-1 text-sm text-slate-700">
+                  Décrivez votre projet*
+                  <textarea
+                    name="description"
+                    rows="5"
+                    minlength="20"
+                    maxlength="800"
+                    required
+                    class="rounded-md border border-slate-200 px-3 py-2 text-base focus:border-brand focus:outline-none"
+                    placeholder="Précisez la nature du bâtiment, les matériaux identifiés (fibrociment, flocage...), les contraintes et votre objectif (diagnostic, retrait, confinement)."
+                  ></textarea>
+                </label>
+              </div>
+              <label class="flex items-start gap-2 text-left text-xs text-slate-500">
+                <input type="checkbox" name="consentement" required class="mt-1" />
+                J'accepte d'être recontacté(e) par Desamiant'Pro et ses partenaires pour traiter ma demande.
+              </label>
+              <div data-form-feedback class="text-sm"></div>
+              <button type="submit" class="btn-brand">Envoyer ma demande</button>
+              <p class="text-xs text-slate-400">
+                Vos données sont traitées conformément à notre
+                <a href="/politique-confidentialite/" class="underline">politique de confidentialité</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 py-10 text-sm text-slate-400">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-white">© <span id="year">2024</span> Desamiant'Pro</p>
+        <nav class="flex gap-4">
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/politique-confidentialite/">Politique de confidentialité</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div data-cookie-banner class="hidden fixed inset-x-0 bottom-0 z-50 bg-slate-900 text-white">
+      <div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-slate-200">
+          Nous utilisons des cookies analytiques pour améliorer le service. Poursuivre vaut accord.
+          Lisez notre <a href="/politique-confidentialite/" class="text-brand underline">politique de confidentialité</a>.
+        </p>
+        <button
+          data-cookie-accept
+          class="inline-flex w-full justify-center rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white shadow-sm sm:w-auto"
+        >
+          Accepter
+        </button>
+      </div>
+    </div>
+
+    <div data-sticky-cta class="fixed inset-x-0 bottom-4 z-40 translate-y-24 px-4 transition duration-300">
+      <div class="mx-auto flex max-w-3xl items-center justify-between rounded-full bg-slate-900/95 px-6 py-3 text-white shadow-xl">
+        <p class="hidden text-sm text-slate-200 md:block">
+          Besoin d'un devis ? Nous répondons sous 2 heures ouvrées.
+        </p>
+        <div class="flex flex-1 justify-end gap-3">
+          <a href="/devis/" class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white">Obtenir un devis</a>
+          <a href="#contact" class="rounded-full border border-slate-500 px-5 py-2 text-sm font-semibold text-slate-100"
+            >Être rappelé</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/main.js" defer></script>
+  </body>
+</html>

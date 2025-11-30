@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Assurance décennale</title>
+  <rect width="64" height="64" rx="12" fill="#1F2937" />
+  <path d="M20 26l12-6 12 6v8c0 8.284-6.268 16-12 16s-12-7.716-12-16v-8z" fill="#fff" opacity="0.9" />
+  <path d="M28 36l4 4 8-8" stroke="#0E7490" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
