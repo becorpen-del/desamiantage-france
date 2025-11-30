@@ -4,6 +4,7 @@ import { getBrandName, getSiteUrl } from "@/lib/utils";
 
 const brandName = getBrandName();
 const siteUrl = getSiteUrl();
+const logoUrl = `${siteUrl}/logo-site.webp`;
 
 const serviceLinks = [
   { href: "/desamiantage-france/", label: "Désamiantage (page pilier)" },
@@ -54,7 +55,7 @@ export function Footer() {
         "@type": "Organization",
         name: brandName,
         url: siteUrl,
-        logo: `${siteUrl}/logo.svg`,
+        logo: logoUrl,
         sameAs: ["https://www.linkedin.com/company/desamiant-pro", "https://www.facebook.com"],
       },
       {
@@ -62,7 +63,7 @@ export function Footer() {
         name: `${brandName} Désamiantage France`,
         url: `${siteUrl}/desamiantage-france`,
         areaServed: "France",
-        image: `${siteUrl}/logo.svg`,
+        image: logoUrl,
         priceRange: "€€€",
         serviceType: "Désamiantage, retrait amiante, diagnostic",
         address: {

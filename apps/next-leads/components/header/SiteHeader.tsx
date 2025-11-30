@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { getBrandName } from "@/lib/utils";
+
 function useOutsideClose<T extends HTMLElement>(onClose: () => void) {
   const ref = useRef<T | null>(null);
 
@@ -51,6 +53,7 @@ const dropdownItems = {
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<null | "services" | "villes" | "pricing">(null);
+  const brandName = getBrandName();
 
   const closeDropdown = useCallback(() => setOpenDropdown(null), []);
   const wrapRef = useOutsideClose<HTMLDivElement>(closeDropdown);
@@ -83,7 +86,14 @@ export default function SiteHeader() {
         <div className="header-content">
           <div className="logo">
             <Link href="/" aria-label="Retour à l'accueil">
-              <Image src="/images/logo.svg" alt="Désamiantage Pro" width={160} height={40} priority />
+              <Image
+                src="/logo-site.webp"
+                alt={brandName}
+                width={160}
+                height={160}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
           </div>
 

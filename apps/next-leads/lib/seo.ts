@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 
 const brandName = getBrandName();
 const siteUrl = getSiteUrl();
+const logoPath = `${siteUrl}/logo-site.webp`;
 const metadataBase = new URL(siteUrl);
 
 type MetadataOptions = {
@@ -137,7 +138,7 @@ export function getOrganizationJsonLd() {
     "@type": "Organization",
     name: brandName,
     url: siteUrl,
-    logo: `${siteUrl}/logo.svg`,
+    logo: logoPath,
     sameAs: ["https://www.linkedin.com/company/desamiant-pro"],
   };
 }
@@ -152,6 +153,7 @@ export function getServiceJsonLd(city?: City) {
       "@type": "Organization",
       name: brandName,
       url: siteUrl,
+      logo: logoPath,
     },
     areaServed: city ? [city.name, ...city.neighbors] : "France",
     offers: {
@@ -172,7 +174,7 @@ export function getLocalBusinessJsonLd(city: City) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: `${brandName} ${city.name}`,
-    image: `${siteUrl}/logo.svg`,
+    image: logoPath,
     url: buildCanonical(`/${city.slug}`),
     areaServed: [city.name, ...city.neighbors],
     address: {
