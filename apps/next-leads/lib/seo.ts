@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 const brandName = getBrandName();
 const siteUrl = getSiteUrl();
-const logoPath = `${siteUrl}/logo-site.webp`;
+const logoPath = `${siteUrl}/logo-desamiantage-france.png`;
 const metadataBase = new URL(siteUrl);
 
 type MetadataOptions = {

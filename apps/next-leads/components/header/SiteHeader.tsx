@@ -87,7 +87,7 @@ export default function SiteHeader() {
           <div className="logo">
             <Link href="/" aria-label="Retour à l'accueil">
               <Image
-                src="/logo-site.webp"
+                src="/logo-desamiantage-france.png"
                 alt={brandName}
                 width={320}
                 height={320}

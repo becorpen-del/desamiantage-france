@@ -4,7 +4,7 @@ import { getBrandName, getSiteUrl } from "@/lib/utils";
 
 const brandName = getBrandName();
 const siteUrl = getSiteUrl();
-const logoUrl = `${siteUrl}/logo-site.webp`;
+const logoUrl = `${siteUrl}/logo-desamiantage-france.png`;
 
 const serviceLinks = [
   { href: "/desamiantage-france/", label: "Désamiantage (page pilier)" },
