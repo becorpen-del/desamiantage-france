@@ -403,7 +403,7 @@ export default function RegionPage({ params }: { params: { region: string } }) {
 
   const breadcrumbLd = getBreadcrumbJsonLd([
     { name: "Accueil", path: "/" },
-    { name: "Désamiantage France", path: "/desamiantage-france" },
+    { name: "Désamiantage-France", path: "/desamiantage-france" },
     { name: region.name, path: `/desamiantage-${region.slug}` },
   ]);
 

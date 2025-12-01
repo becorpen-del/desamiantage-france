@@ -1,4 +1,4 @@
-export type CityKey = "paris" | "bordeaux" | "lyon" | "toulouse" | "nantes";
+export type CityKey = "paris" | "bordeaux" | "lyon" | "toulouse" | "nantes" | "marseille";
 
 export const cities: Record<
   CityKey,
@@ -69,6 +69,17 @@ export const cities: Record<
     responseDelay: "24h",
     postalFallback: "44000",
   },
+  marseille: {
+    name: "Marseille",
+    slug: "marseille",
+    deptCode: "FR-13",
+    geoPlacename: "Marseille",
+    canonical: "https://www.desamiantage-pro.fr/marseille/",
+    prosCount: 14,
+    priceAvgM2: "48€/m²",
+    responseDelay: "24h",
+    postalFallback: "13000",
+  },
 };
 
-export const cityList: CityKey[] = ["paris", "bordeaux", "lyon", "toulouse", "nantes"];
+export const cityList: CityKey[] = ["paris", "bordeaux", "lyon", "toulouse", "nantes", "marseille"];

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState, type RefObject } from "react";
 
 import { useTracking } from "@/lib/tracking";
 import {
@@ -18,6 +18,11 @@ import {
   leadSchema,
   type LeadPayload,
 } from "@/lib/validators";
+
+type SelectOption = {
+  value: LeadPayload["typeBatiment"] | LeadPayload["typePrestation"] | LeadPayload["delai"];
+  label: string;
+};
 
 type ContactFormProps = {
   city?: string;
@@ -61,6 +66,123 @@ const deadlineOptions: Array<{ value: (typeof DEADLINE_OPTIONS)[number]; label: 
   { value: "< 7 jours", label: "Intervention planifiée sous 7 jours" },
   { value: "> 7 jours", label: "Prévisionnel &gt; 7 jours" },
 ];
+
+function useClickOutside(ref: RefObject<HTMLElement>, onClose: () => void) {
+  useEffect(() => {
+    function handle(event: MouseEvent) {
+      if (!ref.current) return;
+      if (!ref.current.contains(event.target as Node)) {
+        onClose();
+      }
+    }
+    document.addEventListener("mousedown", handle);
+    return () => document.removeEventListener("mousedown", handle);
+  }, [onClose, ref]);
+}
+
+type CustomSelectProps<T extends SelectOption["value"]> = {
+  label: string;
+  name: string;
+  value: T;
+  options: Array<SelectOption & { value: T }>;
+  error?: string;
+  onChange: (value: T) => void;
+};
+
+function CustomSelect<T extends SelectOption["value"]>({
+  label,
+  name,
+  value,
+  options,
+  error,
+  onChange,
+}: CustomSelectProps<T>) {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  useClickOutside(wrapperRef, () => setOpen(false));
+
+  const selected = options.find(option => option.value === value) ?? options[0];
+  const fieldId = `${name}-select`;
+  const errorId = error ? `${name}-error` : undefined;
+
+  return (
+    <label className="flex flex-col gap-1 text-sm text-slate-700">
+      {label}
+      {/* Wrapper en relative pour ancrer le menu déroulant en absolute juste sous le champ */}
+      <div ref={wrapperRef} className="relative">
+        <button
+          type="button"
+          id={fieldId}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          aria-invalid={Boolean(error)}
+          aria-describedby={errorId}
+          onClick={() => setOpen(prev => !prev)}
+          className={`flex w-full items-center justify-between rounded-md border px-3 py-2 text-left text-base focus:outline-none ${
+            error ? "border-red-400" : "border-slate-200 focus:border-brand"
+          }`}
+        >
+          <span className="text-slate-900">{selected?.label}</span>
+          <svg
+            aria-hidden
+            className={`h-4 w-4 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M6 8l4 4 4-4" />
+          </svg>
+        </button>
+
+        {open ? (
+          // Menu positionné en absolute sous le champ, largeur 100%, z-index élevé pour mobile
+          <ul
+            role="listbox"
+            aria-labelledby={fieldId}
+            className="absolute left-0 top-full z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg border border-slate-200 bg-white text-sm text-slate-900 shadow-lg"
+          >
+            {options.map(option => (
+              <li key={option.value}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={option.value === value}
+                  onClick={() => {
+                    onChange(option.value);
+                    setOpen(false);
+                  }}
+                  className={`flex w-full items-center justify-between px-3 py-2 text-left hover:bg-slate-50 ${
+                    option.value === value ? "bg-slate-100 font-semibold text-slate-900" : "text-slate-700"
+                  }`}
+                >
+                  <span>{option.label}</span>
+                  {option.value === value ? (
+                    <svg
+                      aria-hidden
+                      className="h-4 w-4 text-brand"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : null}
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+      {error ? (
+        <span id={errorId} className="text-xs text-red-600">
+          {error}
+        </span>
+      ) : null}
+    </label>
+  );
+}
 
 function buildInitialPayload(city?: string, postalCode?: string): LeadPayload {
   return {
@@ -367,53 +489,23 @@ export function ContactForm({ city, postalCode }: ContactFormProps) {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="flex flex-col gap-1 text-sm text-slate-700">
-          Type de bâtiment*
-          <select
-            name="typeBatiment"
-            value={formData.typeBatiment}
-            onChange={event => handleFieldChange("typeBatiment", event.target.value as LeadPayload["typeBatiment"])}
-            className={`rounded-md border px-3 py-2 text-base focus:outline-none ${
-              errors.typeBatiment ? "border-red-400" : "border-slate-200 focus:border-brand"
-            }`}
-          >
-            {buildingOptions.map(option => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          {errors.typeBatiment ? (
-            <span id="error-typeBatiment" className="text-xs text-red-600">
-              {errors.typeBatiment}
-            </span>
-          ) : null}
-        </label>
+        <CustomSelect
+          label="Type de bâtiment*"
+          name="typeBatiment"
+          value={formData.typeBatiment}
+          options={buildingOptions}
+          error={errors.typeBatiment}
+          onChange={val => handleFieldChange("typeBatiment", val)}
+        />
 
-        <label className="flex flex-col gap-1 text-sm text-slate-700">
-          Type de prestation*
-          <select
-            name="typePrestation"
-            value={formData.typePrestation}
-            onChange={event =>
-              handleFieldChange("typePrestation", event.target.value as LeadPayload["typePrestation"])
-            }
-            className={`rounded-md border px-3 py-2 text-base focus:outline-none ${
-              errors.typePrestation ? "border-red-400" : "border-slate-200 focus:border-brand"
-            }`}
-          >
-            {prestationOptions.map(option => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          {errors.typePrestation ? (
-            <span id="error-typePrestation" className="text-xs text-red-600">
-              {errors.typePrestation}
-            </span>
-          ) : null}
-        </label>
+        <CustomSelect
+          label="Type de prestation*"
+          name="typePrestation"
+          value={formData.typePrestation}
+          options={prestationOptions}
+          error={errors.typePrestation}
+          onChange={val => handleFieldChange("typePrestation", val)}
+        />
 
         <label className="md:col-span-2 flex flex-col gap-1 text-sm text-slate-700">
           Décrivez votre besoin (diagnostic, retrait, matériaux concernés...)*

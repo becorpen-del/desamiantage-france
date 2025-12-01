@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
 
 const breadcrumbLd = getBreadcrumbJsonLd([
   { name: "Accueil", path: "/" },
-  { name: "Désamiantage France", path: pagePath },
+  { name: "Désamiantage-France", path: pagePath },
 ]);
 
 const regions = [

@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { getBrandName } from "@/lib/utils";
-
 function useOutsideClose<T extends HTMLElement>(onClose: () => void) {
   const ref = useRef<T | null>(null);
 
@@ -53,11 +51,6 @@ const dropdownItems = {
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<null | "services" | "villes" | "pricing">(null);
-  const brandName = getBrandName();
-  const normalizedBrand = brandName.replace(/[-_]+/g, " ").trim();
-  const [rawBold, ...restTokens] = normalizedBrand.split(/\s+/);
-  const brandBold = /^desam/i.test(rawBold) ? "Désam" : rawBold || brandName;
-  const brandRegular = restTokens.join(" ");
 
   const closeDropdown = useCallback(() => setOpenDropdown(null), []);
   const wrapRef = useOutsideClose<HTMLDivElement>(closeDropdown);
@@ -89,19 +82,16 @@ export default function SiteHeader() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <Link href="/" aria-label="Retour à l'accueil" className="flex items-center gap-3">
+            {/* Bloc marque statique : uniquement le logo officiel pour éviter toute divergence SSR/CSR */}
+            <Link href="/" aria-label="Retour à l'accueil" className="flex items-center">
               <Image
-                src="/logo-desamiantage-france.png"
-                alt={brandName}
+                src="/images/Désamiantage-test-2.png"
+                alt="Désamiantage-France"
                 width={320}
                 height={320}
-                className="h-10 w-auto sm:h-12 lg:h-14"
+                className="h-14 w-auto sm:h-16 lg:h-20"
                 priority
               />
-              <span className="inline-flex items-baseline gap-2 text-xl leading-none text-slate-900 sm:text-2xl">
-                <span className="font-bold">{brandBold}</span>
-                {brandRegular ? <span className="font-normal">{brandRegular}</span> : null}
-              </span>
             </Link>
           </div>
 

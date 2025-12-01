@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { CityLeadForm } from "@/components/CityLeadForm";
 import { cities, cityList } from "@/lib/cities";
 
 import type { Metadata } from "next";
@@ -115,7 +116,7 @@ export default function CityPage({ params }: CityPageProps) {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.desamiantage-pro.fr/" },
-          { "@type": "ListItem", position: 2, name: "Désamiantage France", item: "https://www.desamiantage-pro.fr/desamiantage-france" },
+          { "@type": "ListItem", position: 2, name: "Désamiantage-France", item: "https://www.desamiantage-pro.fr/desamiantage-france" },
           { "@type": "ListItem", position: 3, name: "France" },
           { "@type": "ListItem", position: 4, name: city.name },
         ],
@@ -141,7 +142,7 @@ export default function CityPage({ params }: CityPageProps) {
           </Link>
           <span aria-hidden>›</span>
           <Link href="/desamiantage-france" className="transition hover:text-emerald-300">
-            Désamiantage France
+            Désamiantage-France
           </Link>
           <span aria-hidden>›</span>
           <strong className="text-slate-100">{city.name}</strong>
@@ -195,52 +196,7 @@ export default function CityPage({ params }: CityPageProps) {
               <h2 className="text-lg font-semibold text-white">Recevez 3 devis gratuits</h2>
               <p className="mt-1 text-sm text-slate-300">Entreprises certifiées Qualibat 1552 · Sans engagement</p>
 
-              <form action="/devis-submit/" method="POST" className="mt-5 grid gap-3">
-                <input type="hidden" name="ville" value={city.name} />
-                <input type="hidden" name="code_postal" value={city.postalFallback} />
-
-                <label className="text-xs font-semibold uppercase tracking-wide text-slate-300">
-                  Type de travaux *
-                  <select name="type_travaux" required className="input mt-1">
-                    <option value="">Sélectionnez…</option>
-                    <option value="toiture">Désamiantage toiture</option>
-                    <option value="fibrociment">Retrait fibrociment</option>
-                    <option value="diagnostic">Diagnostic amiante</option>
-                    <option value="autre">Autre (préciser)</option>
-                  </select>
-                </label>
-
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <label className="text-xs font-semibold uppercase tracking-wide text-slate-300">
-                    Surface estimée
-                    <input className="input mt-1" type="number" name="surface" placeholder="m²" />
-                  </label>
-                  <label className="text-xs font-semibold uppercase tracking-wide text-slate-300">
-                    Code postal chantier *
-                    <input className="input mt-1" type="text" name="code_postal_ville" placeholder="Ex. 69001" required />
-                  </label>
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <input className="input" type="text" name="nom" placeholder="Nom et prénom *" required />
-                  <input className="input" type="tel" name="tel" placeholder="Téléphone *" required />
-                </div>
-                <input className="input" type="email" name="email" placeholder="Email *" required />
-
-                <label className="inline-flex items-start gap-2 text-xs text-slate-300">
-                  <input type="checkbox" name="rgpd" required className="mt-1 accent-emerald-500" />
-                  <span>
-                    J&apos;accepte d&apos;être recontacté par les entreprises partenaires pour l&apos;étude de mon dossier (max 3 devis). Mes
-                    données sont traitées conformément à notre politique de confidentialité.
-                  </span>
-                </label>
-
-                <button type="submit" className="btn-cta justify-center">
-                  Recevoir mes devis gratuits
-                </button>
-
-                <p className="text-center text-[11px] text-slate-400">✓ Gratuit · ✓ Sans engagement · ✓ Réponse sous 24h</p>
-              </form>
+              <CityLeadForm cityName={city.name} postalFallback={city.postalFallback} />
             </div>
           </div>
         </div>

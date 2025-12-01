@@ -75,16 +75,17 @@ a {
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
-  padding: 12px 0;
+  padding: 14px 0;
 }
 
 .logo a {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
   height: auto;
-  max-height: 56px;
+  max-height: 88px;
   width: auto;
 }
 

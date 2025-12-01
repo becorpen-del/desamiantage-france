@@ -60,7 +60,7 @@ export function Footer() {
       },
       {
         "@type": "LocalBusiness",
-        name: `${brandName} Désamiantage France`,
+        name: `${brandName} Désamiantage-France`,
         url: `${siteUrl}/desamiantage-france`,
         areaServed: "France",
         image: logoUrl,

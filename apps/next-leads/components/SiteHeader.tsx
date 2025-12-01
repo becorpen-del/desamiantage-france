@@ -14,7 +14,7 @@ const navLinks: NavLink[] = [
   { href: "/" as Route, label: "Accueil" },
   { href: { pathname: "/", hash: "services" }, label: "Services" },
   { href: { pathname: "/", hash: "villes" }, label: "Villes" },
-  { href: "/desamiantage-france" as Route, label: "Désamiantage France" },
+  { href: "/desamiantage-france" as Route, label: "Désamiantage-France" },
 ];
 
 const cityNavLinks = Object.values(cities).filter(
