@@ -1,4 +1,4 @@
-# Desamiantage-Fraance – Générateur de leads désamiantage
+# Desamiantage-France – Générateur de leads désamiantage
 
 Plateforme front/back prête pour capter et revendre des leads « désamiantage » en France. Deux variantes livrées dans un monorepo : Next.js 14 (stack recommandée) et fallback statique Tailwind + Netlify Forms. Le site est pensé SEO-first (architecture scalable par services/villes) et conversion-led (formulaire riche, scoring, envoi Google Sheets).
 

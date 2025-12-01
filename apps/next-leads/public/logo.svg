@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" role="img" aria-labelledby="title desc">
-  <title id="title">Desamiantage-Fraance</title>
-  <desc id="desc">Logo de Desamiantage-Fraance</desc>
+  <title id="title">Desamiantage-France</title>
+  <desc id="desc">Logo de Desamiantage-France</desc>
   <rect width="140" height="32" rx="16" fill="currentColor" opacity="0.08" />
   <path
     d="M22 8c4.418 0 8 3.582 8 8s-3.582 8-8 8h-6V8h6zm-2.4 3H18v10h1.6a5 5 0 0 0 0-10z"
     fill="#0E7490"
   />
   <text x="40" y="21" font-size="14" font-family="'Inter', sans-serif" fill="#0E7490" font-weight="600">
-    Desamiantage-Fraance
+    Desamiantage-France
   </text>
 </svg>

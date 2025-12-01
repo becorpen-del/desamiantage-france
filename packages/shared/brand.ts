@@ -1,4 +1,4 @@
-export const DEFAULT_BRAND_NAME = "Desamiantage-Fraance";
+export const DEFAULT_BRAND_NAME = "Desamiantage-France";
 export const DEFAULT_PRIMARY_COLOR = "#0E7490";
 
 export const brand = {

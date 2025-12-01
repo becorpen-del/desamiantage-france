@@ -1,4 +1,4 @@
-const FALLBACK_BRAND = "Desamiantage-Fraance";
+const FALLBACK_BRAND = "Desamiantage-France";
 const FALLBACK_PRIMARY = "#0E7490";
 const FALLBACK_SITE_URL = "https://www.desamiant-pro.fr";
 
