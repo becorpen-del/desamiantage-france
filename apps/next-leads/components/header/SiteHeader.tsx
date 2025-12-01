@@ -93,12 +93,12 @@ export default function SiteHeader() {
               <Image
                 src="/logo-desamiantage-france.png"
                 alt={brandName}
-                width={1000}
-                height={1000}
-                className="h-[660px] w-auto sm:h-[700px]"
+                width={320}
+                height={320}
+                className="h-10 w-auto sm:h-12 lg:h-14"
                 priority
               />
-              <span className="inline-flex items-baseline gap-2 text-xl leading-none text-white sm:text-2xl">
+              <span className="inline-flex items-baseline gap-2 text-xl leading-none text-slate-900 sm:text-2xl">
                 <span className="font-bold">{brandBold}</span>
                 {brandRegular ? <span className="font-normal">{brandRegular}</span> : null}
               </span>

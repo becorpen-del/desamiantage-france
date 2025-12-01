@@ -74,7 +74,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  min-height: 80px;
+  padding: 12px 0;
 }
 
 .logo a {
@@ -82,7 +83,8 @@ a {
 }
 
 .logo img {
-  height: 45px;
+  height: auto;
+  max-height: 56px;
   width: auto;
 }
 
