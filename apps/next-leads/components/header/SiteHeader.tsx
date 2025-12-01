@@ -54,6 +54,10 @@ export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<null | "services" | "villes" | "pricing">(null);
   const brandName = getBrandName();
+  const normalizedBrand = brandName.replace(/[-_]+/g, " ").trim();
+  const [rawBold, ...restTokens] = normalizedBrand.split(/\s+/);
+  const brandBold = /^desam/i.test(rawBold) ? "Désam" : rawBold || brandName;
+  const brandRegular = restTokens.join(" ");
 
   const closeDropdown = useCallback(() => setOpenDropdown(null), []);
   const wrapRef = useOutsideClose<HTMLDivElement>(closeDropdown);
@@ -85,7 +89,7 @@ export default function SiteHeader() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <Link href="/" aria-label="Retour à l'accueil">
+            <Link href="/" aria-label="Retour à l'accueil" className="flex items-center gap-3">
               <Image
                 src="/logo-desamiantage-france.png"
                 alt={brandName}
@@ -94,6 +98,10 @@ export default function SiteHeader() {
                 className="h-[660px] w-auto sm:h-[700px]"
                 priority
               />
+              <span className="inline-flex items-baseline gap-2 text-xl leading-none text-white sm:text-2xl">
+                <span className="font-bold">{brandBold}</span>
+                {brandRegular ? <span className="font-normal">{brandRegular}</span> : null}
+              </span>
             </Link>
           </div>
 

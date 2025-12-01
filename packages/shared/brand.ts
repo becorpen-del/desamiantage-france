@@ -1,9 +1,22 @@
 export const DEFAULT_BRAND_NAME = "Desamiantage-France";
 export const DEFAULT_PRIMARY_COLOR = "#0E7490";
 
+const brandNameFromEnv =
+  process.env.NEXT_PUBLIC_BRAND_NAME ??
+  process.env.BRAND_NAME ??
+  DEFAULT_BRAND_NAME;
+
+const primaryColorFromEnv =
+  process.env.NEXT_PUBLIC_PRIMARY_COLOR ??
+  process.env.PRIMARY_COLOR ??
+  DEFAULT_PRIMARY_COLOR;
+
+export const BRAND_NAME = brandNameFromEnv;
+export const BRAND_PRIMARY_COLOR = primaryColorFromEnv;
+
 export const brand = {
-  name: process.env.BRAND_NAME ?? DEFAULT_BRAND_NAME,
-  primaryColor: process.env.PRIMARY_COLOR ?? DEFAULT_PRIMARY_COLOR,
+  name: BRAND_NAME,
+  primaryColor: BRAND_PRIMARY_COLOR,
 };
 
 export type BrandConfig = typeof brand;

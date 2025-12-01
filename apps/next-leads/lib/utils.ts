@@ -1,15 +1,9 @@
-const FALLBACK_BRAND = "Desamiantage-France";
-const FALLBACK_PRIMARY = "#0E7490";
+import { BRAND_NAME, BRAND_PRIMARY_COLOR } from "@desamiant/shared";
+
 const FALLBACK_SITE_URL = "https://www.desamiant-pro.fr";
 
-const brandName =
-  process.env.NEXT_PUBLIC_BRAND_NAME ??
-  process.env.BRAND_NAME ??
-  FALLBACK_BRAND;
-const primaryColor =
-  process.env.NEXT_PUBLIC_PRIMARY_COLOR ??
-  process.env.PRIMARY_COLOR ??
-  FALLBACK_PRIMARY;
+const brandName = BRAND_NAME;
+const primaryColor = BRAND_PRIMARY_COLOR;
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   process.env.SITE_URL ??
