@@ -89,9 +89,9 @@ export default function SiteHeader() {
               <Image
                 src="/logo-desamiantage-france.png"
                 alt={brandName}
-                width={480}
-                height={480}
-                className="h-40 w-auto sm:h-44"
+                width={1000}
+                height={1000}
+                className="h-[660px] w-auto sm:h-[700px]"
                 priority
               />
             </Link>
