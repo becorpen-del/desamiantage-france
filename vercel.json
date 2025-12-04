@@ -1,8 +1,6 @@
 {
-  "installCommand": "npm install --workspaces",
+  "installCommand": "npm install",
   "buildCommand": "cd apps/next-leads && npm run build",
-  "outputDirectory": "apps/next-leads/.next",
-  "framework": "nextjs",
-  "rootDirectory": "apps/next-leads"
+  "outputDirectory": "apps/next-leads/.next"
 }
 
