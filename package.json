@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "node ./scripts/stack-run.mjs dev",
     "build": "node ./scripts/stack-run.mjs build",
