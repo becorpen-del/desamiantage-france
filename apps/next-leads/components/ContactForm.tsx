@@ -86,7 +86,7 @@ type CustomSelectProps<T extends SelectOption["value"]> = {
   value: T;
   options: Array<SelectOption & { value: T }>;
   error?: string;
-  onChange: (value: T) => void;
+  onChange: (_value: T) => void;
 };
 
 function CustomSelect<T extends SelectOption["value"]>({
@@ -115,7 +115,6 @@ function CustomSelect<T extends SelectOption["value"]>({
           id={fieldId}
           aria-haspopup="listbox"
           aria-expanded={open}
-          aria-invalid={Boolean(error)}
           aria-describedby={errorId}
           onClick={() => setOpen(prev => !prev)}
           className={`flex w-full items-center justify-between rounded-md border px-3 py-2 text-left text-base focus:outline-none ${
