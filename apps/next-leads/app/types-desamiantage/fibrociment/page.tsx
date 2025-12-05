@@ -166,7 +166,7 @@ export default function FibrocimentPage() {
               Accueil
             </Link>{" "}
             ›{" "}
-            <Link href="/types-desamiantage/" className="hover:text-emerald-200">
+            <Link href="/types-desamiantage" className="hover:text-emerald-200">
               Types de désamiantage
             </Link>{" "}
             › <span className="text-white font-semibold">Fibrociment</span>
@@ -319,11 +319,11 @@ export default function FibrocimentPage() {
             </ul>
             <p className="text-sm">
               Pour un chiffrage précis, consultez notre{" "}
-              <Link href="/prix-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/prix-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 guide complet des prix
               </Link>{" "}
               et notre{" "}
-              <Link href="/devis-gratuit/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/devis-gratuit" className="text-emerald-200 hover:text-emerald-100">
                 service de devis gratuit
               </Link>
               . Le tarif désamiantage fibrociment dépend aussi des accès (rue étroite, cour intérieure) et des contraintes de copropriété.
@@ -358,7 +358,7 @@ export default function FibrocimentPage() {
               </ul>
               <p className="mt-2">
                 En urgence (fuite, sinistre), certaines étapes peuvent être accélérées, mais le cadre réglementaire reste obligatoire.{" "}
-                <Link href="/desamiantage-france/" className="text-emerald-200 hover:text-emerald-100">
+                <Link href="/desamiantage-france" className="text-emerald-200 hover:text-emerald-100">
                   Accédez à la carte des régions
                 </Link>{" "}
                 pour mobiliser rapidement une entreprise désamiantage fibrociment proche.
@@ -437,7 +437,7 @@ export default function FibrocimentPage() {
                 Demandez l&apos;attestation Qualibat 1552, les habilitations SS3/SS4 des opérateurs, les attestations d&apos;assurance et les rapports
                 d&apos;audit. Consultez la liste des entreprises certifiées.
               </p>
-              <Link href="/entreprises-certifiees/" className="mt-2 inline-flex text-emerald-200 hover:text-emerald-100">
+              <Link href="/entreprises-certifiees" className="mt-2 inline-flex text-emerald-200 hover:text-emerald-100">
                 Vérifiez les certifications d&apos;une entreprise →
               </Link>
             </article>
@@ -462,11 +462,11 @@ export default function FibrocimentPage() {
             </ul>
             <p className="mt-2">
               Pour toute question sur les obligations, consultez{" "}
-              <Link href="/types-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/types-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 tous les types de désamiantage
               </Link>{" "}
               ou notre{" "}
-              <Link href="/prix-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/prix-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 guide des prix
               </Link>
               .
@@ -549,19 +549,19 @@ export default function FibrocimentPage() {
           </section>
 
           <section className="space-y-4 text-sm text-emerald-200">
-            <Link className="hover:text-emerald-100" href="/types-desamiantage/">
+            <Link className="hover:text-emerald-100" href="/types-desamiantage">
               Découvrez tous les types de désamiantage
             </Link>
-            <Link className="hover:text-emerald-100" href="/prix-desamiantage/">
+            <Link className="hover:text-emerald-100" href="/prix-desamiantage">
               Consultez notre guide complet des prix
             </Link>
-            <Link className="hover:text-emerald-100" href="/types-desamiantage/toiture/">
+            <Link className="hover:text-emerald-100" href="/types-desamiantage/toiture">
               Désamiantage de toiture
             </Link>
-            <Link className="hover:text-emerald-100" href="/entreprises-certifiees/">
+            <Link className="hover:text-emerald-100" href="/entreprises-certifiees">
               Vérifiez les certifications d&apos;une entreprise
             </Link>
-            <Link className="hover:text-emerald-100" href="/devis-gratuit/">
+            <Link className="hover:text-emerald-100" href="/devis-gratuit">
               Obtenez votre devis gratuit
             </Link>
           </section>

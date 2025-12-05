@@ -577,10 +577,10 @@ export default function DesamiantageFrancePage() {
                   <a href="#cta-form" className="btn-cta">
                     Obtenir 3 devis gratuits
                   </a>
-                  <Link href="/prix-desamiantage/" className="btn-secondary">
+                  <Link href="/prix-desamiantage" className="btn-secondary">
                     Voir les prix moyens
                   </Link>
-                  <Link href="/entreprises-certifiees/" className="text-emerald-200 hover:text-emerald-100">
+                  <Link href="/entreprises-certifiees" className="text-emerald-200 hover:text-emerald-100">
                     Consultez la liste des entreprises certifiées
                   </Link>
                 </div>

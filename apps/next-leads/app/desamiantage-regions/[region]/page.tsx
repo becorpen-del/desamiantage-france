@@ -624,7 +624,7 @@ export default function RegionPage({ params }: { params: { region: string } }) {
                 <a href="#cta-form" className="btn-cta">
                   Comparer les devis
                 </a>
-                <Link href="/entreprises-certifiees/" className="btn-secondary">
+                <Link href="/entreprises-certifiees" className="btn-secondary">
                   Voir les critères de certification
                 </Link>
               </div>
@@ -663,7 +663,7 @@ export default function RegionPage({ params }: { params: { region: string } }) {
                   <a href="#cta-form" className="btn-cta">
                     Obtenir 3 devis gratuits
                   </a>
-                  <Link href="/prix-desamiantage/" className="btn-secondary">
+                  <Link href="/prix-desamiantage" className="btn-secondary">
                     Voir les prix nationaux
                   </Link>
                   <Link href="/desamiantage-france" className="text-emerald-200 hover:text-emerald-100">

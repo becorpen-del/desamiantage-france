@@ -436,7 +436,7 @@ export default function DesamiantageToiturePage() {
                   <p className="text-xs uppercase tracking-wide text-emerald-200">Liens utiles</p>
                   <ul className="mt-2 space-y-2">
                     <li>
-                      <Link href="/prix-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+                      <Link href="/prix-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                         Découvrez tous nos prix de désamiantage
                       </Link>
                     </li>
@@ -488,7 +488,7 @@ export default function DesamiantageToiturePage() {
                   <li>• Filmage et palettisation pour optimiser le transport.</li>
                   <li>• Recouvrement possible si plaques intactes, à valider par un diagnostiqueur.</li>
                 </ul>
-                <Link href="/desamiantage-fibrociment/" className="inline-flex text-emerald-200 hover:text-emerald-100">
+                <Link href="/desamiantage-fibrociment" className="inline-flex text-emerald-200 hover:text-emerald-100">
                   En savoir plus sur le fibrociment →
                 </Link>
               </aside>
@@ -596,7 +596,7 @@ export default function DesamiantageToiturePage() {
                   Demandez les attestations RC pro et décennale incluant le lot amiante, ainsi que la procédure de déclaration de sinistre.
                   Vérifiez que le BSD et le rapport fin de chantier sont fournis systématiquement.
                 </p>
-                <Link href="/entreprises-certifiees/" className="mt-3 inline-flex text-emerald-200 hover:text-emerald-100">
+                <Link href="/entreprises-certifiees" className="mt-3 inline-flex text-emerald-200 hover:text-emerald-100">
                   Consultez la liste des entreprises certifiées
                 </Link>
               </article>

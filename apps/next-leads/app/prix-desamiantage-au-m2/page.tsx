@@ -297,7 +297,7 @@ export default function PrixDesamiantagePage() {
                 <h3 className="text-lg font-semibold text-white">5. La zone géographique</h3>
                 <p className="mt-2">
                   Île-de-France : +10-20% vs province. Grandes villes plus chères, zones rurales avec frais de déplacement.{" "}
-                  <Link href="/desamiantage-france/" className="text-emerald-200 hover:text-emerald-100">
+                  <Link href="/desamiantage-france" className="text-emerald-200 hover:text-emerald-100">
                     Prix par région →
                   </Link>
                 </p>
@@ -331,7 +331,7 @@ export default function PrixDesamiantagePage() {
                   Prix désamiantage dalles vinyle-amiante : 35-90€/m² (simple 35-60€, colle 60-90€). Forfait min. 800-1 200€. Exemple 60 m² :
                   2 500-4 500€.
                 </p>
-                <Link href="/types-desamiantage/dalles-de-sol/" className="text-emerald-200 hover:text-emerald-100">
+                <Link href="/types-desamiantage/dalles-de-sol" className="text-emerald-200 hover:text-emerald-100">
                   En savoir plus sur les dalles de sol →
                 </Link>
               </article>
@@ -498,7 +498,7 @@ export default function PrixDesamiantagePage() {
                   <li>Paiement total d&apos;avance</li>
                   <li>Absence de BSD mentionné</li>
                 </ul>
-                <Link href="/devis-gratuit/" className="text-emerald-200 hover:text-emerald-100">
+                <Link href="/devis-gratuit" className="text-emerald-200 hover:text-emerald-100">
                   Demandez vos devis gratuits →
                 </Link>
               </article>
@@ -594,7 +594,7 @@ export default function PrixDesamiantagePage() {
               </table>
             </div>
             <div className="flex flex-wrap gap-3 text-sm text-emerald-200">
-              <Link href="/desamiantage-france/" className="hover:text-emerald-100">
+              <Link href="/desamiantage-france" className="hover:text-emerald-100">
                 Voir tous les prix par ville →
               </Link>
             </div>

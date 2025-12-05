@@ -87,7 +87,7 @@ export default function EntreprisesCertifieesPage() {
                 </p>
               </div>
               <Link
-                href="/devis-gratuit/"
+                href="/devis-gratuit"
                 className="inline-flex items-center justify-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 Demander un devis

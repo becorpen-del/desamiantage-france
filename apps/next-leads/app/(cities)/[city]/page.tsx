@@ -247,7 +247,7 @@ export default function CityPage({ params }: CityPageProps) {
                 </div>
                 <h2 className="text-2xl font-semibold text-white">Prix du désamiantage à {city.name}</h2>
                 <p>
-                  Le <Link href="/prix-desamiantage/">prix du désamiantage</Link> dépend du type de matériaux (friables ou non), de la surface, du confinement et de la
+                  Le <Link href="/prix-desamiantage">prix du désamiantage</Link> dépend du type de matériaux (friables ou non), de la surface, du confinement et de la
                   logistique (hauteur, accès, gestion des déchets). Les estimations ci-dessous permettent de situer votre budget avant devis.
                 </p>
 
@@ -366,7 +366,7 @@ export default function CityPage({ params }: CityPageProps) {
                       Subventions pour propriétaires occupants, bailleurs ou copropriétés visant la rénovation thermique ou la mise en sécurité.
                     </p>
                     <strong className="mt-3 block text-emerald-200">35% à 50% du montant HT</strong>
-                    <Link href="/aides-financieres/" className="mt-2 inline-flex text-xs text-emerald-300 hover:text-emerald-200">
+                    <Link href="/aides-financieres" className="mt-2 inline-flex text-xs text-emerald-300 hover:text-emerald-200">
                       En savoir plus →
                     </Link>
                   </div>
@@ -442,17 +442,17 @@ export default function CityPage({ params }: CityPageProps) {
                     <h4 className="font-semibold text-white">Vous pourriez aussi aimer</h4>
                     <ul className="mt-3 space-y-2 text-emerald-200">
                       <li>
-                        <Link href="/prix-desamiantage/" className="transition hover:text-emerald-100">
+                        <Link href="/prix-desamiantage" className="transition hover:text-emerald-100">
                           💰 Prix du désamiantage
                         </Link>
                       </li>
                       <li>
-                        <Link href="/types-desamiantage/toiture/" className="transition hover:text-emerald-100">
+                        <Link href="/types-desamiantage/toiture" className="transition hover:text-emerald-100">
                           🏠 Désamiantage toiture
                         </Link>
                       </li>
                       <li>
-                        <Link href="/entreprises-certifiees/" className="transition hover:text-emerald-100">
+                        <Link href="/entreprises-certifiees" className="transition hover:text-emerald-100">
                           ✅ Entreprises certifiées
                         </Link>
                       </li>

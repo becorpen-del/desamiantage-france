@@ -159,7 +159,7 @@ export default function DevisDesamiantagePage() {
             <span className="rounded-full bg-white/10 px-3 py-1">Entreprises certifiées</span>
           </div>
           <div className="text-sm text-emerald-200">
-            <Link href="/prix-desamiantage-au-m2/" className="hover:text-emerald-100">
+            <Link href="/prix-desamiantage-au-m2" className="hover:text-emerald-100">
               Voir les prix moyens du marché →
             </Link>
           </div>
@@ -253,7 +253,7 @@ Certifications SS4 et assurance jointes
                 <p className="mt-2 text-sm text-emerald-200">
                   Prix au m² : 5 198€ ÷ 85 = 61€/m², dans la moyenne (55-70€/m²).
                 </p>
-                <Link href="/prix-desamiantage-au-m2/" className="text-emerald-200 hover:text-emerald-100">
+                <Link href="/prix-desamiantage-au-m2" className="text-emerald-200 hover:text-emerald-100">
                   Comparer avec d&apos;autres prix →
                 </Link>
               </article>
@@ -307,7 +307,7 @@ Validité : 3 mois
               </ul>
               <p className="mt-2 text-sm text-emerald-200">
                 En savoir plus sur les dalles :{" "}
-                <Link href="/types-desamiantage/dalles-de-sol/" className="text-emerald-200 hover:text-emerald-100">
+                <Link href="/types-desamiantage/dalles-de-sol" className="text-emerald-200 hover:text-emerald-100">
                   désamiantage dalles →
                 </Link>
               </p>
@@ -394,7 +394,7 @@ Validité : 3 mois
               <p>2. Plus grand ≠ moins cher au m² si le matériau est très friable (flocage).</p>
               <p>3. Tous incluent retrait, évacuation et certificat final.</p>
               <p>4. Délais réalistes : 2-3 jours (petits), 1 semaine (gros).</p>
-              <Link href="/prix-desamiantage-au-m2/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/prix-desamiantage-au-m2" className="text-emerald-200 hover:text-emerald-100">
                 Voir tous les prix moyens →
               </Link>
             </div>
@@ -451,7 +451,7 @@ Validité : 3 mois
                 <p>Pas forcément la moins chère, mais la plus claire et certifiée.</p>
                 <p className="text-sm text-emerald-200">
                   En savoir plus sur les certifications :{" "}
-                  <Link href="/entreprises-certifiees/" className="text-emerald-200 hover:text-emerald-100">
+                  <Link href="/entreprises-certifiees" className="text-emerald-200 hover:text-emerald-100">
                     entreprises certifiées →
                   </Link>
                 </p>

@@ -157,7 +157,7 @@ export default function TarifDesamiantagePage() {
               Consultez la page pilier pour plus de détails.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-emerald-200">
-              <Link href="/prix-desamiantage-au-m2/" className="hover:text-emerald-100">
+              <Link href="/prix-desamiantage-au-m2" className="hover:text-emerald-100">
                 Prix moyens détaillés →
               </Link>
             </div>
@@ -183,17 +183,17 @@ export default function TarifDesamiantagePage() {
             <h2 className="text-2xl font-semibold text-white">Liens utiles du silo prix</h2>
             <ul className="space-y-2 text-sm text-emerald-200">
               <li>
-                <Link className="hover:text-emerald-100" href="/prix-desamiantage-au-m2/">
+                <Link className="hover:text-emerald-100" href="/prix-desamiantage-au-m2">
                   Guide des prix désamiantage (pilier)
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-emerald-100" href="/devis-gratuit/">
+                <Link className="hover:text-emerald-100" href="/devis-gratuit">
                   Demander vos devis gratuits
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-emerald-100" href="/entreprises-certifiees/">
+                <Link className="hover:text-emerald-100" href="/entreprises-certifiees">
                   Vérifier les entreprises certifiées
                 </Link>
               </li>

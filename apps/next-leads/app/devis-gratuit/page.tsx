@@ -83,7 +83,7 @@ export default function DevisGratuitPage() {
                 </p>
               </div>
               <Link
-                href="/entreprises-certifiees/"
+                href="/entreprises-certifiees"
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 Voir les entreprises certifiées

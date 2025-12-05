@@ -244,7 +244,7 @@ export default function DallesDeSolPage() {
             </div>
             <p className="text-sm text-slate-300">
               Diagnostic amiante :{" "}
-              <Link href="/diagnostic-amiante/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/diagnostic-amiante" className="text-emerald-200 hover:text-emerald-100">
                 en savoir plus →
               </Link>
             </p>
@@ -291,14 +291,14 @@ export default function DallesDeSolPage() {
             </div>
             <p className="text-sm">
               Pour plus de repères tarifaires :{" "}
-              <Link href="/prix-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/prix-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 consulter le guide des prix →
               </Link>
             </p>
             <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4 text-sm text-emerald-100">
               <p className="text-base font-semibold text-emerald-200">📊 Exemple : 80 m² de dalles vinyle-amiante</p>
               <p className="mt-2 text-slate-100">Prix moyen : 3 500 - 5 500€ TTC (diagnostic + retrait + évacuation).</p>
-              <Link href="/desamiantage-france/" className="mt-2 inline-flex text-emerald-200 hover:text-emerald-100">
+              <Link href="/desamiantage-france" className="mt-2 inline-flex text-emerald-200 hover:text-emerald-100">
                 Comparez les devis dans votre région →
               </Link>
             </div>
@@ -313,7 +313,7 @@ export default function DallesDeSolPage() {
                   <li>• Certification sous-section 4</li>
                   <li>• Qualification Qualibat 1552 ou équivalent</li>
                   <li>
-                    <Link href="/entreprises-certifiees/" className="text-emerald-200 hover:text-emerald-100">
+                    <Link href="/entreprises-certifiees" className="text-emerald-200 hover:text-emerald-100">
                       Voir les entreprises certifiées →
                     </Link>
                   </li>
@@ -385,7 +385,7 @@ export default function DallesDeSolPage() {
             </div>
             <p className="text-sm text-slate-300">
               Vous avez aussi un toit en fibrociment ?{" "}
-              <Link href="/types-desamiantage/toiture/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/types-desamiantage/toiture" className="text-emerald-200 hover:text-emerald-100">
                 Voir la page toiture →
               </Link>
             </p>

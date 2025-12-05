@@ -354,7 +354,7 @@ export default function DiagnosticAmiantePage() {
             </div>
             <p className="text-sm">
               Pour plus de détails sur les coûts, consultez notre{" "}
-              <Link href="/prix-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/prix-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 guide des prix
               </Link>
               .
@@ -434,7 +434,7 @@ export default function DiagnosticAmiantePage() {
             </ul>
             <p className="text-sm">
               Découvrez nos solutions de désamiantage :{" "}
-              <Link href="/types-desamiantage/" className="text-emerald-200 hover:text-emerald-100">
+              <Link href="/types-desamiantage" className="text-emerald-200 hover:text-emerald-100">
                 désamiantage obligatoire
               </Link>
               .
@@ -467,7 +467,7 @@ export default function DiagnosticAmiantePage() {
                 </ul>
                 <p className="mt-2 text-sm">
                   Vérifiez toujours la certification sur l&apos;annuaire officiel du Ministère. Consultez aussi la{" "}
-                  <Link href="/entreprises-certifiees/" className="text-emerald-200 hover:text-emerald-100">
+                  <Link href="/entreprises-certifiees" className="text-emerald-200 hover:text-emerald-100">
                     liste des entreprises certifiées
                   </Link>
                   .

@@ -191,27 +191,27 @@ export function Footer() {
                 <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white">Maillage rapide</h3>
                 <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   <li>
-                    <Link className="transition hover:text-[#00A9FF]" href="/prix-desamiantage/">
+                    <Link className="transition hover:text-[#00A9FF]" href="/prix-desamiantage">
                       Découvrez les prix du désamiantage
                     </Link>
                   </li>
                   <li>
-                    <Link className="transition hover:text-[#00A9FF]" href="/entreprises-certifiees/">
+                    <Link className="transition hover:text-[#00A9FF]" href="/entreprises-certifiees">
                       Vérifiez les certifications
                     </Link>
                   </li>
                   <li>
-                    <Link className="transition hover:text-[#00A9FF]" href="/prix-desamiantage/">
+                    <Link className="transition hover:text-[#00A9FF]" href="/prix-desamiantage">
                       Comparez les devis
                     </Link>
                   </li>
                   <li>
-                    <Link className="transition hover:text-[#00A9FF]" href="/desamiantage-france/">
+                    <Link className="transition hover:text-[#00A9FF]" href="/desamiantage-france">
                       Carte des régions et villes
                     </Link>
                   </li>
                   <li>
-                    <Link className="transition hover:text-[#00A9FF]" href="/types-desamiantage/toiture/">
+                    <Link className="transition hover:text-[#00A9FF]" href="/types-desamiantage/toiture">
                       Désamiantage toiture (fibrociment, ardoises)
                     </Link>
                   </li>

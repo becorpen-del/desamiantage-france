@@ -208,7 +208,7 @@ export default function SiteHeader() {
                         <p>
                           <strong>Besoin d&apos;un devis ?</strong>
                         </p>
-                        <Link href="/devis-gratuit/" className="btn-dropdown" onClick={handleNavigate}>
+                        <Link href="/devis-gratuit" className="btn-dropdown" onClick={handleNavigate}>
                           Recevoir 3 devis gratuits
                         </Link>
                       </div>
@@ -220,7 +220,7 @@ export default function SiteHeader() {
           </nav>
 
           <div className="header-cta">
-            <Link href="/devis-gratuit/" className="btn-cta" onClick={handleNavigate}>
+            <Link href="/devis-gratuit" className="btn-cta" onClick={handleNavigate}>
               Obtenir 3 devis gratuits
             </Link>
           </div>
