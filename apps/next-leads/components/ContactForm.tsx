@@ -86,7 +86,8 @@ type CustomSelectProps<T extends SelectOption["value"]> = {
   value: T;
   options: Array<SelectOption & { value: T }>;
   error?: string;
-  onChange: (_value: T) => void;
+  // eslint-disable-next-line no-unused-vars
+  onChange: (value: T) => void;
 };
 
 function CustomSelect<T extends SelectOption["value"]>({

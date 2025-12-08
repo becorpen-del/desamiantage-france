@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { Route } from "next";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function useOutsideClose<T extends HTMLElement>(onClose: () => void) {
@@ -25,28 +26,30 @@ function useOutsideClose<T extends HTMLElement>(onClose: () => void) {
   return ref;
 }
 
-const dropdownItems = {
+type NavItem = { href: Route; label: string };
+
+const dropdownItems: { services: NavItem[]; villes: NavItem[]; pricing: NavItem[] } = {
   services: [
-    { href: "/types-desamiantage/toiture/", label: "Désamiantage toiture" },
-    { href: "/desamiantage-fibrociment/", label: "Désamiantage fibrociment" },
-    { href: "/diagnostic-amiante/", label: "Diagnostic amiante" },
-    { href: "/types-desamiantage/dalles-de-sol", label: "Désamiantage dalles de sol" },
-    { href: "/tous-les-services/", label: "Tous les services →" },
+    { href: "/types-desamiantage/toiture/" as Route, label: "Désamiantage toiture" },
+    { href: "/desamiantage-fibrociment/" as Route, label: "Désamiantage fibrociment" },
+    { href: "/diagnostic-amiante/" as Route, label: "Diagnostic amiante" },
+    { href: "/types-desamiantage/dalles-de-sol" as Route, label: "Désamiantage dalles de sol" },
+    { href: "/tous-les-services/" as Route, label: "Tous les services →" },
   ],
   villes: [
-    { href: "/paris", label: "Paris" },
-    { href: "/bordeaux", label: "Bordeaux" },
-    { href: "/lyon", label: "Lyon" },
-    { href: "/toulouse", label: "Toulouse" },
-    { href: "/nantes", label: "Nantes" },
+    { href: "/paris" as Route, label: "Paris" },
+    { href: "/bordeaux" as Route, label: "Bordeaux" },
+    { href: "/lyon" as Route, label: "Lyon" },
+    { href: "/toulouse" as Route, label: "Toulouse" },
+    { href: "/nantes" as Route, label: "Nantes" },
   ],
   pricing: [
-    { href: "/prix-desamiantage/", label: "💰 Guide des prix" },
-    { href: "/prix-desamiantage-au-m2/", label: "📏 Prix au m²" },
-    { href: "/devis-desamiantage/", label: "📋 Exemple de devis" },
-    { href: "/tarif-desamiantage/", label: "🏷️ Grille tarifaire" },
+    { href: "/prix-desamiantage/" as Route, label: "💰 Guide des prix" },
+    { href: "/prix-desamiantage-au-m2/" as Route, label: "📏 Prix au m²" },
+    { href: "/devis-desamiantage/" as Route, label: "📋 Exemple de devis" },
+    { href: "/tarif-desamiantage/" as Route, label: "🏷️ Grille tarifaire" },
   ],
-} as const;
+};
 
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);

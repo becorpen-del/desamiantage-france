@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 
 import { createMetadata, getBreadcrumbJsonLd, getFaqJsonLd } from "@/lib/seo";
 
@@ -75,12 +76,12 @@ const zoneRisks = [
   "Joints et colles anciennes",
 ];
 
-const internalLinks = [
-  { href: "/types-desamiantage/", label: "Découvrez tous les types de désamiantage" },
-  { href: "/prix-desamiantage/", label: "Consultez notre guide des prix" },
-  { href: "/entreprises-certifiees/", label: "Vérifiez les certifications d'une entreprise" },
-  { href: "/desamiantage-france/", label: "Trouvez un pro près de chez vous" },
-  { href: "/types-desamiantage/toiture/", label: "Désamiantage de toiture" },
+const internalLinks: Array<{ href: Route; label: string }> = [
+  { href: "/types-desamiantage/" as Route, label: "Découvrez tous les types de désamiantage" },
+  { href: "/prix-desamiantage/" as Route, label: "Consultez notre guide des prix" },
+  { href: "/entreprises-certifiees/" as Route, label: "Vérifiez les certifications d'une entreprise" },
+  { href: "/desamiantage-france/" as Route, label: "Trouvez un pro près de chez vous" },
+  { href: "/types-desamiantage/toiture/" as Route, label: "Désamiantage de toiture" },
 ];
 
 const timelineItems = [

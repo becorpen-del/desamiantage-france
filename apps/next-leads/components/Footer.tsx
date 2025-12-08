@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 
 import { getBrandName, getSiteUrl } from "@/lib/utils";
 
@@ -6,43 +7,45 @@ const brandName = getBrandName();
 const siteUrl = getSiteUrl();
 const logoUrl = `${siteUrl}/logo-desamiantage-france.png`;
 
-const serviceLinks = [
-  { href: "/desamiantage-france/", label: "Désamiantage (page pilier)" },
-  { href: "/prix-desamiantage/", label: "Prix du désamiantage" },
-  { href: "/types-desamiantage/toiture/", label: "Types de travaux" },
-  { href: "/entreprises-certifiees/", label: "Entreprises certifiées" },
+type NavLink = { href: Route; label: string };
+
+const serviceLinks: NavLink[] = [
+  { href: "/desamiantage-france/" as Route, label: "Désamiantage (page pilier)" },
+  { href: "/prix-desamiantage/" as Route, label: "Prix du désamiantage" },
+  { href: "/types-desamiantage/toiture/" as Route, label: "Types de travaux" },
+  { href: "/entreprises-certifiees/" as Route, label: "Entreprises certifiées" },
 ];
 
-const cityLinks = [
-  { href: "/paris", label: "Désamiantage Paris" },
-  { href: "/lyon", label: "Désamiantage Lyon" },
-  { href: "/marseille", label: "Désamiantage Marseille" },
-  { href: "/toulouse", label: "Désamiantage Toulouse" },
-  { href: "/nice", label: "Désamiantage Nice" },
-  { href: "/nantes", label: "Désamiantage Nantes" },
-  { href: "/montpellier", label: "Désamiantage Montpellier" },
-  { href: "/strasbourg", label: "Désamiantage Strasbourg" },
-  { href: "/bordeaux", label: "Désamiantage Bordeaux" },
-  { href: "/lille", label: "Désamiantage Lille" },
-  { href: "/desamiantage-france/", label: "Voir toutes les villes →" },
+const cityLinks: NavLink[] = [
+  { href: "/paris" as Route, label: "Désamiantage Paris" },
+  { href: "/lyon" as Route, label: "Désamiantage Lyon" },
+  { href: "/marseille" as Route, label: "Désamiantage Marseille" },
+  { href: "/toulouse" as Route, label: "Désamiantage Toulouse" },
+  { href: "/nice" as Route, label: "Désamiantage Nice" },
+  { href: "/nantes" as Route, label: "Désamiantage Nantes" },
+  { href: "/montpellier" as Route, label: "Désamiantage Montpellier" },
+  { href: "/strasbourg" as Route, label: "Désamiantage Strasbourg" },
+  { href: "/bordeaux" as Route, label: "Désamiantage Bordeaux" },
+  { href: "/lille" as Route, label: "Désamiantage Lille" },
+  { href: "/desamiantage-france/" as Route, label: "Voir toutes les villes →" },
 ];
 
-const regionLinks = [
-  { href: "/desamiantage-ile-de-france/", label: "Île-de-France" },
-  { href: "/desamiantage-auvergne-rhone-alpes/", label: "Auvergne-Rhône-Alpes" },
-  { href: "/desamiantage-nouvelle-aquitaine/", label: "Nouvelle-Aquitaine" },
-  { href: "/desamiantage-occitanie/", label: "Occitanie" },
-  { href: "/desamiantage-provence-alpes-cote-d-azur/", label: "Provence-Alpes-Côte d'Azur" },
-  { href: "/desamiantage-grand-est/", label: "Grand Est" },
+const regionLinks: NavLink[] = [
+  { href: "/desamiantage-ile-de-france/" as Route, label: "Île-de-France" },
+  { href: "/desamiantage-auvergne-rhone-alpes/" as Route, label: "Auvergne-Rhône-Alpes" },
+  { href: "/desamiantage-nouvelle-aquitaine/" as Route, label: "Nouvelle-Aquitaine" },
+  { href: "/desamiantage-occitanie/" as Route, label: "Occitanie" },
+  { href: "/desamiantage-provence-alpes-cote-d-azur/" as Route, label: "Provence-Alpes-Côte d'Azur" },
+  { href: "/desamiantage-grand-est/" as Route, label: "Grand Est" },
 ];
 
-const infoLinks = [
-  { href: "/a-propos/", label: "À propos" },
-  { href: "/comment-ca-marche/", label: "Comment ça marche" },
-  { href: "/mentions-legales/", label: "Mentions légales" },
-  { href: "/politique-confidentialite/", label: "Politique de confidentialité" },
-  { href: "/cgu/", label: "CGU" },
-  { href: "/sitemap.xml", label: "Plan du site" },
+const infoLinks: NavLink[] = [
+  { href: "/a-propos/" as Route, label: "À propos" },
+  { href: "/comment-ca-marche/" as Route, label: "Comment ça marche" },
+  { href: "/mentions-legales/" as Route, label: "Mentions légales" },
+  { href: "/politique-confidentialite/" as Route, label: "Politique de confidentialité" },
+  { href: "/cgu/" as Route, label: "CGU" },
+  { href: "/sitemap.xml" as Route, label: "Plan du site" },
 ];
 
 export function Footer() {

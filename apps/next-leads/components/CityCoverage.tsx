@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 
 import { cities } from "@/lib/cities";
 import { slugify } from "@/lib/utils";
@@ -10,13 +11,13 @@ type CityCoverageProps = {
   introduction: string;
 };
 
-type CityHref = string | { hash: string };
+type CityHref = Route | { hash: string };
 
 function resolveCityHref(name: string): CityHref {
   const slug = slugify(name);
   const existingCity = cities[slug as keyof typeof cities];
   if (existingCity) {
-    return `/${existingCity.slug}`;
+    return `/${existingCity.slug}` as Route;
   }
 
   return { hash: "devis" };

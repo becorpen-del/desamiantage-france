@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 
 import { createMetadata, getBreadcrumbJsonLd, getFaqJsonLd } from "@/lib/seo";
 
@@ -133,15 +134,15 @@ const processSteps = [
   },
 ];
 
-const internalLinks = [
-  { href: "/types-desamiantage/", label: "Tous les types de désamiantage" },
-  { href: "/diagnostic-amiante/", label: "En savoir plus sur le diagnostic amiante" },
-  { href: "/prix-desamiantage/", label: "Voir les prix moyens" },
-  { href: "/entreprises-certifiees/", label: "Entreprises certifiées" },
-  { href: "/entreprises-certifiees/qualibat-1552/", label: "Certification Qualibat 1552" },
-  { href: "/types-desamiantage/toiture/", label: "Désamiantage de toiture" },
-  { href: "/types-desamiantage/fibrociment/", label: "Désamiantage fibrociment" },
-  { href: "/desamiantage-france/", label: "Trouver un pro près de chez vous" },
+const internalLinks: Array<{ href: Route; label: string }> = [
+  { href: "/types-desamiantage/" as Route, label: "Tous les types de désamiantage" },
+  { href: "/diagnostic-amiante/" as Route, label: "En savoir plus sur le diagnostic amiante" },
+  { href: "/prix-desamiantage/" as Route, label: "Voir les prix moyens" },
+  { href: "/entreprises-certifiees/" as Route, label: "Entreprises certifiées" },
+  { href: "/entreprises-certifiees/qualibat-1552/" as Route, label: "Certification Qualibat 1552" },
+  { href: "/types-desamiantage/toiture/" as Route, label: "Désamiantage de toiture" },
+  { href: "/types-desamiantage/fibrociment/" as Route, label: "Désamiantage fibrociment" },
+  { href: "/desamiantage-france/" as Route, label: "Trouver un pro près de chez vous" },
 ];
 
 export default function DallesDeSolPage() {

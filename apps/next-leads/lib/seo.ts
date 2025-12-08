@@ -83,13 +83,10 @@ export function getParisMetadata(): Metadata {
 }
 
 export function getCityMetadata(city: City, options?: { description?: string; title?: string; noindex?: boolean }): Metadata {
-  const baseTitle = options?.title ?? `Désamiantage ${city.name} (${city.dept}) | ${brandName}`;
+  const baseTitle = options?.title ?? `Désamiantage ${city.name} | ${brandName}`;
   const description =
     options?.description ??
-    `Expertise désamiantage à ${city.name} : diagnostic, confinement, retrait et traçabilité BSD pour ${city.cp} et le département ${city.dept}. Intervention sur ${[
-      city.name,
-      ...city.neighbors,
-    ].join(", ")}.`;
+    `Expertise désamiantage à ${city.name} : diagnostic, confinement, retrait et traçabilité BSD pour ${city.postalFallback} et ses environs. ${city.prosCount} entreprises certifiées, prix moyen ${city.priceAvgM2}.`;
 
   return createMetadata({
     title: baseTitle,
@@ -155,7 +152,7 @@ export function getServiceJsonLd(city?: City) {
       url: siteUrl,
       logo: logoPath,
     },
-    areaServed: city ? [city.name, ...city.neighbors] : "France",
+    areaServed: city ? city.name : "France",
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -176,12 +173,12 @@ export function getLocalBusinessJsonLd(city: City) {
     name: `${brandName} ${city.name}`,
     image: logoPath,
     url: buildCanonical(`/${city.slug}`),
-    areaServed: [city.name, ...city.neighbors],
+    areaServed: city.name,
     address: {
       "@type": "PostalAddress",
       addressLocality: city.name,
-      postalCode: city.cp,
-      addressRegion: city.region,
+      postalCode: city.postalFallback,
+      addressRegion: city.geoPlacename,
       addressCountry: "FR",
     },
     parentOrganization: {

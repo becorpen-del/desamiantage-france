@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
+import type { Route } from "next";
 
 import { ContactForm } from "@/components/ContactForm";
 import { createMetadata, getBreadcrumbJsonLd, getFaqJsonLd } from "@/lib/seo";
@@ -412,11 +413,11 @@ export default function RegionPage({ params }: { params: { region: string } }) {
   const neighborLinks = region.neighbors
     .map(slug => regions.find(r => r.slug === slug))
     .filter(Boolean)
-    .map(r => ({ name: r!.name, href: `/desamiantage-${r!.slug}/` }));
+    .map(r => ({ name: r!.name, href: `/desamiantage-${r!.slug}/` as Route }));
 
   const regionPath = `/desamiantage-${region.slug}/`;
 
-  const cityPath = (city: string) => `${regionPath}${slugify(city)}/`;
+  const cityPath = (city: string) => `${regionPath}${slugify(city)}/` as Route;
 
   return (
     <>

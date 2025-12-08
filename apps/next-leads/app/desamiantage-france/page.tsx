@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
+import type { Route } from "next";
 
 import { ContactForm } from "@/components/ContactForm";
 import { createMetadata, getBreadcrumbJsonLd, getFaqJsonLd } from "@/lib/seo";
@@ -165,7 +166,7 @@ function RegionCard({ name, slug, companies, price }: (typeof regions)[number]) 
       <p className="text-sm text-slate-200">{companies} entreprises certifiées</p>
       <p className="text-sm text-slate-200">Prix moyen : {price}</p>
       <div className="flex flex-wrap gap-2">
-        <Link href={`/desamiantage-${slug}/`} className="btn-secondary">
+        <Link href={`/desamiantage-${slug}/` as Route} className="btn-secondary">
           Voir les entreprises →
         </Link>
         <a href="#cta-form" className="btn-ghost text-sm">
@@ -283,7 +284,7 @@ export default function DesamiantageFrancePage() {
                       <span aria-hidden>🏙</span>
                       <span className="font-semibold text-white">{region}</span>
                     </div>
-                    <Link href={`/desamiantage-${regions.find(r => r.name === region)?.slug ?? ""}/`} className="text-xs text-emerald-200 hover:text-emerald-100">
+                    <Link href={`/desamiantage-${regions.find(r => r.name === region)?.slug ?? ""}/` as Route} className="text-xs text-emerald-200 hover:text-emerald-100">
                       Voir la région →
                     </Link>
                   </div>
@@ -296,7 +297,7 @@ export default function DesamiantageFrancePage() {
                         {city.cpc ? <span className="rounded-full bg-emerald-500/10 px-2 py-1 text-[11px] text-emerald-200">CPC {city.cpc}</span> : null}
                         {city.hot ? <span className="rounded-full bg-amber-500/15 px-2 py-1 text-[11px] text-amber-100">Forte demande</span> : null}
                         <Link
-                          href={`/desamiantage-${regions.find(r => r.name === region)?.slug ?? ""}/${city.city.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
+                          href={`/desamiantage-${regions.find(r => r.name === region)?.slug ?? ""}/${city.city.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/` as Route}
                           className="text-emerald-200 transition hover:text-emerald-100"
                         >
                           Voir les pros →
@@ -390,7 +391,7 @@ export default function DesamiantageFrancePage() {
                       <td className="px-4 py-3">{row.price}</td>
                       <td className="px-4 py-3">{row.variation}</td>
                       <td className="px-4 py-3">
-                        <Link href={row.link} className="text-emerald-200 hover:text-emerald-100">
+                        <Link href={row.link as Route} className="text-emerald-200 hover:text-emerald-100">
                           Voir les prix →
                         </Link>
                       </td>

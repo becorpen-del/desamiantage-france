@@ -1,19 +1,18 @@
 export type CityKey = "paris" | "bordeaux" | "lyon" | "toulouse" | "nantes" | "marseille";
 
-export const cities: Record<
-  CityKey,
-  {
-    name: string;
-    slug: CityKey;
-    deptCode: string;
-    geoPlacename: string;
-    canonical: string;
-    prosCount: number;
-    priceAvgM2: string;
-    responseDelay: string;
-    postalFallback: string;
-  }
-> = {
+export type City = {
+  name: string;
+  slug: CityKey;
+  deptCode: string;
+  geoPlacename: string;
+  canonical: string;
+  prosCount: number;
+  priceAvgM2: string;
+  responseDelay: string;
+  postalFallback: string;
+};
+
+export const cities: Record<CityKey, City> = {
   paris: {
     name: "Paris",
     slug: "paris",
